@@ -3,12 +3,12 @@ import Navbar from '../components/navbar';
 
 export default function App() {
 	return (
-		<>
+		<div className="relative overflow-hidden">
 			<Navbar />
 
 			<div className="px-4 max-w-4xl mx-auto text-white flex flex-wrap justify-between md:px-10 lg:max-w-5xl xl:px-6 xl:max-w-screen-xl lg:justify-start">
 				<div className="w-full md:w-1/2 text-center md:text-left">
-					<h1 className="text-4xl leading-relaxed lg:text-5xl xl:text-6xl">
+					<h1 className="text-4xl font-light leading-relaxed lg:text-5xl xl:text-6xl">
 						Hey, I'm
 						<br />
 						<span className="uppercase font-bold tracking-10">
@@ -49,6 +49,60 @@ export default function App() {
 					</div>
 				</div>
 			</div>
-		</>
+
+			<div className="relative mt-20 pl-4 pr-8 text-white max-w-4xl mx-auto sm:mt-32 lg:max-w-6xl">
+				<div
+					className="absolute z-0 bg-gray-800 opacity-50 mt-40 -mr-40 right-0"
+					style={{ height: '1200px', width: '600px' }}
+				/>
+				<div className="absolute inset-0 z-10 ml-10 mr-4 mt-4 -mb-4 border-2 border-white hover:bg-gray-700 focus:bg-gray-700 transition duration-500 ease-in-out" />
+				<div className="relative z-20 bg-dark-card-gradient shadow-lg p-4 text-center transform hover:translate-x-1 hover:translate-y-1 focus:translate-x-1 focus:translate-y-1 transition duration-500 ease-in-out sm:p-10 lg:p-16">
+					<p>
+						I'm an electrical engineer who always loved software
+						development, and learn how to make products for whatever
+						cool device I found. I live in Venezuela, and from the
+						very beginning I started to make remote software
+						projects. I have worked with people in Venezuela, USA,
+						Spain, Australia, Argentina, England, Italy, and so on.
+					</p>
+					<p className="mt-10">
+						My main focus is on <b>web development</b> because I
+						think that right now is the most needed kind of products
+						in the world. I work mainly with <b>Laravel</b>,{' '}
+						<b>VueJS</b>, <b>React</b> but I'm not limited to that,
+						I think that one of the best quality I have is that I
+						keep learning new technologies to improve my criteria
+						about building software products.
+					</p>
+					<p className="mt-10">
+						I see the future really interesting about multiplatform
+						development, so I've been working on <b>Flutter</b>,{' '}
+						<b>React Native</b> and <b>Ionic</b>. But without
+						forgetting what I think is the most important part of
+						software development, the backend. Every day look to
+						improve my skills on writing better code depending on
+						the situation.
+					</p>
+					<p className="mt-10">
+						There are so many things that I've been working on and I
+						want to show you. So, please check my website and see
+						what I can offer.
+					</p>
+					<p className="mt-10 text-right text-lg font-bold">Luis</p>
+				</div>
+			</div>
+
+			<div className="relative text-white mt-20 sm:mt-32">
+				<h2 className="text-center font-light text-3xl leading-relaxed lg:text-5xl xl:text-4xl">
+					Check my
+					<br />
+					<span className="uppercase font-bold tracking-10">
+						Latest posts
+					</span>
+				</h2>
+			</div>
+
+			<div className="h-64" />
+		</div>
 	);
 }
