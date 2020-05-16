@@ -1,0 +1,33 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.bg-dark-gradient {
+    background: linear-gradient(0deg, rgba(26,32,44,1) 0%, rgba(45,55,72,1) 100%);
+}
+
+.bg-dark-card-gradient {
+    background: linear-gradient(0deg, #2D3748 0%, #4A5568 100%);
+}
+
+.nav-link:after {
+    @apply absolute;
+    @apply bottom-0;
+    @apply border;
+    @apply border-solid;
+    @apply border-white;
+    @apply opacity-0;
+    @apply transition-all;
+    @apply duration-150;
+    @apply ease-in-out;
+    content: "";
+    left: 25%;
+    right: 25%;
+}
+
+.nav-link:hover:after {
+    @apply opacity-100;
+
+}
