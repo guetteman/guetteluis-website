@@ -1,7 +1,23 @@
 import * as React from 'react';
 import Navbar from '../components/navbar';
+import { useEffect, useState } from 'react';
 
 export default function App() {
+	const [topPosition, setTopPosition] = useState(-60);
+
+	const handleScroll = () => {
+		let scrollTop = window.scrollY;
+		setTopPosition(-scrollTop / 3 - 60);
+	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
 	return (
 		<div className="relative overflow-hidden">
 			<Navbar />
@@ -53,7 +69,11 @@ export default function App() {
 			<div className="relative mt-20 pl-4 pr-8 text-white max-w-4xl mx-auto sm:mt-32 lg:max-w-6xl">
 				<div
 					className="absolute z-0 bg-gray-800 opacity-50 transform translate-y-40 translate-x-40 right-0"
-					style={{ height: '1200px', width: '600px' }}
+					style={{
+						top: topPosition + 'px',
+						height: '1200px',
+						width: '600px',
+					}}
 				/>
 				<div className="absolute inset-0 z-10 ml-10 mr-4 mt-4 -mb-4 border-2 border-white hover:bg-gray-700 focus:bg-gray-700 transition duration-500 ease-in-out" />
 				<div className="relative z-20 bg-dark-card-gradient shadow-lg p-4 text-center transform hover:translate-x-1 hover:translate-y-1 focus:translate-x-1 focus:translate-y-1 transition duration-500 ease-in-out sm:p-10 lg:p-16">
@@ -95,7 +115,11 @@ export default function App() {
 			<div className="relative text-white mt-20 max-w-6xl mx-auto sm:mt-32">
 				<div
 					className="absolute z-0 left-0 bg-gray-800 opacity-50 transform translate-y-64"
-					style={{ height: '1000px', width: '400px' }}
+					style={{
+						top: topPosition + 400 + 'px',
+						height: '1000px',
+						width: '400px',
+					}}
 				/>
 
 				<h2 className="relative text-center font-light text-3xl leading-relaxed lg:text-5xl">
@@ -194,8 +218,17 @@ export default function App() {
 				</div>
 			</div>
 
-			<div className="relative text-white mt-20 px-4 sm:mt-32">
-				<h2 className="text-center font-light text-3xl leading-relaxed lg:text-5xl">
+			<div className="relative text-white mt-20 px-4 max-w-6xl mx-auto sm:mt-32">
+				<div
+					className="absolute z-0 bg-gray-800 opacity-50 transform translate-y-64 right-0"
+					style={{
+						top: topPosition + 400 + 'px',
+						height: '1100px',
+						width: '500px',
+					}}
+				/>
+
+				<h2 className="relative text-center font-light text-3xl leading-relaxed lg:text-5xl">
 					Or watch
 					<br />
 					<span className="uppercase font-bold tracking-10">
@@ -203,7 +236,7 @@ export default function App() {
 					</span>
 				</h2>
 
-				<div className="mt-10 mx-auto max-w-md grid grid-cols-1 gap-8 md:max-w-4xl md:grid-cols-2 md:gap-4 lg:max-w-4xl lg:gap-10">
+				<div className="relative mt-10 mx-auto max-w-md grid grid-cols-1 gap-8 md:max-w-4xl md:grid-cols-2 md:gap-4 lg:max-w-4xl lg:gap-10">
 					<div className="flex max-w-md bg-dark-card-gradient shadow-lg">
 						<img
 							className="h-64 w-1/2 object-cover object center"
@@ -306,7 +339,7 @@ export default function App() {
 					</div>
 				</div>
 
-				<div className="mt-12 text-center">
+				<div className="relative mt-12 text-center">
 					<a
 						href="#"
 						className="mt-4 py-4 px-8 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out"
@@ -511,8 +544,10 @@ export default function App() {
 				</div>
 			</div>
 
-			<div className="py-40">
-				<div className="flex flex-wrap items-center justify-center sm:space-x-10">
+			<div className="relative py-20 sm:py-40">
+				<div className="hidden absolute z-0 w-full h-64 bg-gray-800 opacity-50 transform sm:block sm:w-1/2 sm:translate-x-1/2 sm:translate-y-24" />
+
+				<div className="relative flex flex-wrap items-center justify-center sm:space-x-10">
 					<a
 						href="#"
 						className="relative nav-link p-4 text-white text-sm uppercase tracking-24 sm:p-2"
@@ -541,7 +576,7 @@ export default function App() {
 						Contact me
 					</a>
 				</div>
-				<div className="mt-8 flex items-center justify-center space-x-16">
+				<div className="relative mt-8 flex items-center justify-center space-x-16">
 					<a
 						href="#"
 						className="py-2 text-white transform hover:scale-105 focus:scale-105 transition duration-200 ease-in-out"
