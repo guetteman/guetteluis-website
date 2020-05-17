@@ -4,10 +4,6 @@
 
 @tailwind utilities;
 
-.bg-dark-gradient {
-    background: linear-gradient(0deg, rgba(26,32,44,1) 0%, rgba(45,55,72,1) 100%);
-}
-
 .bg-dark-card-gradient {
     background: linear-gradient(0deg, #2D3748 0%, #4A5568 100%);
 }

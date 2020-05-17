@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
 					/>
 				</Head>
 
-				<body className="min-h-screen bg-dark-gradient">
+				<body className="min-h-screen bg-gray-900">
 					<Main />
 					<NextScript />
 				</body>
