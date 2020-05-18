@@ -1,8 +1,10 @@
 import * as React from 'react';
 import Navbar from '../components/navbar';
 import { useEffect, useState } from 'react';
+import LatestPosts from '../components/posts/latestPosts';
+import { getPosts } from '../lib/api/post';
 
-export default function App() {
+export default function App({ posts }) {
 	const [topPosition, setTopPosition] = useState(-60);
 
 	const handleScroll = () => {
@@ -135,59 +137,8 @@ export default function App() {
 						className="hidden absolute inset-x-0 h-96 max-w-lg mx-auto bg-gray-700 opacity-75 shadow-lg sm:block lg:h-72 lg:max-w-3xl"
 						style={{ top: '60px' }}
 					/>
-					<a href="#" className="relative w-full sm:w-auto sm:p-4">
-						<div className="relative h-72 w-72 mx-auto transform hover:scale-105 hover:shadow-xl focus:scale-105 focus:shadow-xl transition duration-300 ease-in-out">
-							<img
-								className="absolute inset-0"
-								src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&h=500&q=60"
-								alt=""
-							/>
-							<div className="absolute inset-0 bg-gray-900 opacity-50" />
 
-							<div className="absolute bottom-0 p-4">
-								<p className="text-sm">Sep 27, 2017</p>
-								<h3 className="font-bold">
-									How to Configure an API with ExpressJS
-								</h3>
-							</div>
-						</div>
-					</a>
-
-					<a href="#" className="relative w-full sm:w-auto sm:p-4">
-						<div className="relative h-72 w-72 mx-auto transform hover:scale-105 hover:shadow-xl focus:scale-105 focus:shadow-xl transition duration-300 ease-in-out">
-							<img
-								className="absolute inset-0"
-								src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&h=500&q=60"
-								alt=""
-							/>
-							<div className="absolute inset-0 bg-gray-900 opacity-50" />
-
-							<div className="absolute bottom-0 p-4">
-								<p className="text-sm">Sep 27, 2017</p>
-								<h3 className="font-bold">
-									How to Configure an API with ExpressJS
-								</h3>
-							</div>
-						</div>
-					</a>
-
-					<a href="#" className="relative w-full sm:w-auto sm:p-4">
-						<div className="relative h-72 w-72 mx-auto transform hover:scale-105 hover:shadow-xl focus:scale-105 focus:shadow-xl transition duration-300 ease-in-out">
-							<img
-								className="absolute inset-0"
-								src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&h=500&q=60"
-								alt=""
-							/>
-							<div className="absolute inset-0 bg-gray-900 opacity-50" />
-
-							<div className="absolute bottom-0 p-4">
-								<p className="text-sm">Sep 27, 2017</p>
-								<h3 className="font-bold">
-									How to Configure an API with ExpressJS
-								</h3>
-							</div>
-						</div>
-					</a>
+					<LatestPosts posts={posts} />
 
 					<div className="relative w-full pt-4 px-4 text-center md:pt-10 lg:pt-12">
 						<p className="font-light">Learn more about</p>
@@ -614,4 +565,17 @@ export default function App() {
 			</div>
 		</div>
 	);
+}
+
+export async function getStaticProps({ params }) {
+	const posts = getPosts(
+		['title', 'date', 'slug', 'coverImage', 'headerImage', 'imageAlt'],
+		3
+	);
+
+	return {
+		props: {
+			posts: posts,
+		},
+	};
 }
