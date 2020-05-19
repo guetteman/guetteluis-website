@@ -7,6 +7,7 @@ import Footer from '../../components/footer';
 import Head from 'next/head';
 import { APP_NAME } from '../../lib/constants';
 import Meta from '../../components/meta';
+import ArticleBody from '../../components/articleBody';
 const Prism = require('../../lib/prism');
 
 export default function Post({ post }) {
@@ -42,10 +43,7 @@ export default function Post({ post }) {
 					/>
 				</header>
 
-				<article
-					className="max-w-2xl mx-auto py-10 px-4 markdown"
-					dangerouslySetInnerHTML={{ __html: post.content }}
-				/>
+				<ArticleBody content={post.content} />
 
 				<Footer />
 			</div>
