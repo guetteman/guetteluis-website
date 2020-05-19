@@ -1,0 +1,245 @@
+/**
+ * Based on Tailwind CSS theme: https://github.com/tailwindcss/docs
+ */
+
+.markdown {
+    @apply text-gray-200;
+    @apply leading-relaxed;
+}
+.markdown > *:first-child {
+    @apply mt-0;
+}
+.markdown > * + * {
+    @apply mt-6;
+}
+.markdown > ul > * + *,
+.markdown > ol > * + * {
+    @apply mt-4;
+}
+.markdown .subnav,
+.subnav.markdown {
+    @apply flex;
+    @apply mt-6;
+    @apply mb-6;
+    @apply pb-2;
+    @apply border-b-2;
+    @apply text-white;
+}
+.markdown .subnav .subnav-link,
+.subnav.markdown .subnav-link,
+.subnav-link.markdown .subnav,
+.subnav-link.subnav.markdown {
+    @apply mr-6;
+    @apply leading-none;
+    @apply text-white;
+    @apply text-sm;
+}
+.markdown > h2::before,
+.markdown > h3::before,
+.markdown > .heading::before {
+    display: block;
+    height: 6rem;
+    margin-top: -6rem;
+    visibility: hidden;
+    content: '';
+}
+.markdown > hr {
+    @apply border-t-0 border-r-0 border-l-0 border-b-2 border-gray-200 my-16;
+}
+.markdown > a,
+.markdown > p a,
+.markdown > ul li a,
+.markdown > ol li a,
+a.markdown {
+    @apply text-indigo-400 underline font-medium;
+}
+.markdown > a:hover,
+.markdown > p a:hover,
+.markdown > ul li a:hover,
+.markdown > ol li a:hover,
+a.markdown:hover {
+    @apply text-indigo-200;
+}
+.markdown > a strong,
+.markdown > p a strong,
+.markdown > ul li a strong,
+.markdown > ol li a strong,
+a.markdown strong {
+    @apply text-indigo-400;
+}
+.markdown > a code,
+.markdown > p a code,
+.markdown > ul li a code,
+.markdown > ol li a code,
+a.markdown code {
+    @apply underline text-indigo-400;
+}
+.markdown > p strong,
+.markdown > ul strong {
+    @apply font-semibold;
+    @apply text-gray-100;
+}
+.markdown > p code,
+.markdown > ul li *:not(pre) code,
+.markdown > ul li > code,
+.markdown > ol li *:not(pre) code,
+.markdown > ol li > code,
+p.markdown code.markdown {
+    @apply inline-block;
+    @apply bg-gray-900;
+    @apply rounded-sm;
+    @apply text-sm;
+    @apply px-1;
+    @apply leading-none;
+    @apply whitespace-no-wrap;
+    @apply text-indigo-400;
+    @apply font-mono;
+    @apply align-baseline;
+    font-weight: 400;
+}
+.markdown > p strong code,
+.markdown > ul li strong code,
+.markdown > ol li strong code {
+    font-weight: 600;
+}
+.markdown > pre,
+pre.markdown {
+    @apply font-mono;
+    @apply rounded-lg;
+    font-weight: 400;
+    scrollbar-width: none;
+}
+.markdown > pre::-webkit-scrollbar,
+pre.markdown::-webkit-scrollbar {
+    display: none;
+}
+.markdown > blockquote,
+blockquote.markdown {
+    @apply italic;
+    @apply text-white;
+    @apply text-sm;
+}
+.markdown > h1,
+h1.markdown {
+    @apply mb-1;
+    @apply leading-tight;
+    @apply text-white;
+    @apply font-medium;
+    @apply text-3xl;
+}
+.markdown > h2,
+h2.markdown {
+    @apply mt-16;
+    @apply mb-4;
+    @apply text-white;
+    @apply leading-tight;
+    @apply font-normal;
+    @apply text-2xl;
+}
+.markdown > h2 + h3 {
+    @apply mt-6;
+}
+.markdown > h3,
+h3.markdown {
+    @apply mt-12 -mb-3;
+    @apply text-white;
+    @apply leading-tight;
+    @apply font-medium;
+    @apply text-xl;
+}
+.markdown > h4,
+h4.markdown {
+    @apply mt-12;
+    @apply mb-0;
+    @apply text-white;
+    @apply leading-snug;
+    @apply font-medium;
+    @apply text-lg;
+}
+.markdown > h1 + p {
+    @apply mt-8;
+}
+.markdown > h1 > code,
+.markdown > h2 > code,
+.markdown > h3 > code,
+.markdown > h4 > code {
+    @apply text-purple-600;
+    @apply font-mono;
+}
+.markdown > h3 > code {
+    @apply text-lg px-1 bg-gray-900;
+}
+.markdown > h4 > code {
+    @apply text-base px-1 bg-gray-900;
+}
+.markdown > p,
+p.markdown,
+.markdown > blockquote > p {
+    @apply text-base;
+    @apply mt-6;
+}
+.markdown > ul:not(.list-none) {
+    @apply pl-0 list-none;
+}
+.markdown > ul:not(.list-none) li {
+    @apply relative pl-5;
+}
+.markdown > ul:not(.list-none) li::before {
+    @apply absolute left-0 text-indigo-400 inline-block mr-3;
+    content: '\2022';
+}
+.markdown > ol {
+    @apply list-none;
+    counter-reset: item;
+}
+.markdown > ol > li {
+    @apply relative pl-10;
+}
+.markdown > ol > li::before {
+    @apply absolute top-0 left-0 mt-px;
+    @apply flex items-center justify-center;
+    @apply h-6 w-6 bg-indigo-500 rounded-full;
+    @apply text-white text-xs font-bold;
+    content: counter(item);
+    counter-increment: item;
+}
+.markdown > :not(pre):not(h1):not(h2):not(h3):not(h4) > code,
+.markdown > ul code,
+.markdown > ol code {
+    @apply bg-gray-900;
+    @apply text-sm;
+    @apply leading-normal;
+}
+.markdown > pre,
+pre.markdown,
+.markdown > ul li pre,
+.markdown > ol li pre {
+    @apply flex p-0 bg-gray-800;
+    @apply text-sm leading-normal;
+}
+.markdown > pre code,
+pre code.markdown,
+.markdown > ul li pre code,
+.markdown > ol li pre code {
+    @apply p-4;
+}
+.markdown > table {
+    @apply w-full text-left;
+}
+.markdown > table th {
+    @apply text-sm font-semibold text-gray-700 p-2 bg-gray-900;
+}
+.markdown > table td {
+    @apply p-2 border-t border-gray-200 text-sm;
+}
+.markdown > table td code {
+    @apply bg-gray-900 px-1 font-mono text-xs text-indigo-300 align-baseline;
+}
+.markdown > table td:first-child {
+    @apply border-gray-300;
+}
+
+.markdown > p > img {
+    height: 500px;
+    @apply w-full object-contain object-center;
+}

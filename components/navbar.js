@@ -94,7 +94,7 @@ export default function Navbar() {
 				>
 					<div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
 						<div className="shadow-lg">
-							<div className="rounded-lg bg-dark-card-gradient shadow-xs overflow-hidden">
+							<div className="bg-dark-card-gradient shadow-xs overflow-hidden">
 								<div className="px-5 pt-4 flex items-center justify-between">
 									<div>{Logo}</div>
 									<div className="-mr-2">
