@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import LatestPosts from '../components/posts/latestPosts';
 import { getPosts } from '../lib/api/post';
 import Footer from '../components/footer';
+import Head from 'next/head';
+import { APP_NAME, HOME_OG_IMAGE_URL } from '../lib/constants';
 
 export default function App({ posts }) {
 	const [topPosition, setTopPosition] = useState(-60);
@@ -24,6 +26,11 @@ export default function App({ posts }) {
 	return (
 		<div className="relative overflow-hidden">
 			<Navbar />
+
+			<Head>
+				<title>{APP_NAME}</title>
+				<meta property="og:image" content={HOME_OG_IMAGE_URL} />
+			</Head>
 
 			<div className="px-4 max-w-4xl mx-auto text-white flex flex-wrap justify-between md:px-10 lg:max-w-5xl xl:px-6 xl:max-w-screen-xl lg:justify-start">
 				<div className="w-full md:w-1/2 text-center md:text-left">
