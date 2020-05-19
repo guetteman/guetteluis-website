@@ -6,6 +6,7 @@ import DateFormatter from '../../components/dateFormatter';
 import Footer from '../../components/footer';
 import Head from 'next/head';
 import { APP_NAME } from '../../lib/constants';
+import Meta from '../../components/meta';
 const Prism = require('../../lib/prism');
 
 export default function Post({ post }) {
@@ -14,9 +15,8 @@ export default function Post({ post }) {
 	}, []);
 
 	return (
-		<div className="relative overflow-hidden text-white">
-			<Navbar />
-
+		<>
+			<Meta />
 			<Head>
 				<title>
 					{post.title} | {APP_NAME} Blog
@@ -24,28 +24,32 @@ export default function Post({ post }) {
 				<meta property="og:image" content={post.ogImage.url} />
 			</Head>
 
-			<header className="max-w-screen-lg mx-auto">
-				<div className="max-w-2xl mx-auto px-4">
-					<h1 className="leading-tight text-2xl md:text-4xl">
-						{post.title}
-					</h1>
-					<DateFormatter dateString={post.date} />
-				</div>
+			<div className="relative overflow-hidden text-white">
+				<Navbar />
 
-				<img
-					className="max-w-screen-lg mx-auto mt-4 h-72 w-full object-cover object-center sm:h-96 sm:mt-10"
-					src={post.headerImage}
-					alt={post.imageAlt}
+				<header className="max-w-screen-lg mx-auto">
+					<div className="max-w-2xl mx-auto px-4">
+						<h1 className="leading-tight text-2xl md:text-4xl">
+							{post.title}
+						</h1>
+						<DateFormatter dateString={post.date} />
+					</div>
+
+					<img
+						className="max-w-screen-lg mx-auto mt-4 h-72 w-full object-cover object-center sm:h-96 sm:mt-10"
+						src={post.headerImage}
+						alt={post.imageAlt}
+					/>
+				</header>
+
+				<article
+					className="max-w-2xl mx-auto py-10 px-4 markdown"
+					dangerouslySetInnerHTML={{ __html: post.content }}
 				/>
-			</header>
 
-			<article
-				className="max-w-2xl mx-auto py-10 px-4 markdown"
-				dangerouslySetInnerHTML={{ __html: post.content }}
-			/>
-
-			<Footer />
-		</div>
+				<Footer />
+			</div>
+		</>
 	);
 }
 
