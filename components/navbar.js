@@ -54,33 +54,23 @@ export default function Navbar() {
 								</a>
 							</Link>
 
-							<a
-								href="#"
-								className="relative nav-link ml-10 py-2 text-white text-sm uppercase tracking-24"
-							>
-								Projects
-							</a>
+							<Link href="/projects">
+								<a className="relative nav-link ml-10 py-2 text-white text-sm uppercase tracking-24">
+									Projects
+								</a>
+							</Link>
 
-							<a
-								href="#"
-								className="relative nav-link ml-10 py-2 text-white text-sm uppercase tracking-24"
-							>
-								Skills
-							</a>
+							<Link href="/skills">
+								<a className="relative nav-link ml-10 py-2 text-white text-sm uppercase tracking-24">
+									Skills
+								</a>
+							</Link>
 
-							<a
-								href="#"
-								className="relative nav-link ml-10 py-2 text-white text-sm uppercase tracking-24"
-							>
-								English
-							</a>
-
-							<a
-								href="#"
-								className="ml-10 py-2 px-4 border-2 border-white text-white uppercase text-sm tracking-24 bg-transparent hover:bg-white hover:text-gray-900 transition duration-150 ease-in-out"
-							>
-								Contact me
-							</a>
+							<Link href="/contact-me">
+								<a className="ml-10 py-2 px-4 border-2 border-white text-white uppercase text-sm tracking-24 bg-transparent hover:bg-white hover:text-gray-900 transition duration-150 ease-in-out">
+									Contact me
+								</a>
+							</Link>
 						</div>
 					</nav>
 				</div>
@@ -124,40 +114,29 @@ export default function Navbar() {
 									</div>
 								</div>
 								<div className="px-2 pt-4 pb-3">
-									<a
-										href="#"
-										className="block px-3 py-2 text-base uppercase text-white tracking-24 hover:text-gray-100 hover:bg-gray-800 hover:bg-opacity-25 focus:outline-none focus:text-gray-100 focus:bg-gray-800 focus:bg-opacity-25 transition duration-150 ease-in-out"
-									>
-										Blog
-									</a>
+									<Link href="/blog">
+										<a className="block px-3 py-2 text-base uppercase text-white tracking-24 hover:text-gray-100 hover:bg-gray-800 hover:bg-opacity-25 focus:outline-none focus:text-gray-100 focus:bg-gray-800 focus:bg-opacity-25 transition duration-150 ease-in-out">
+											Blog
+										</a>
+									</Link>
 
-									<a
-										href="#"
-										className="block px-3 py-2 text-base uppercase text-white tracking-24 hover:text-gray-100 hover:bg-gray-800 hover:bg-opacity-25 focus:outline-none focus:text-gray-100 focus:bg-gray-800 focus:bg-opacity-25 transition duration-150 ease-in-out"
-									>
-										Projects
-									</a>
+									<Link href="/projects">
+										<a className="block px-3 py-2 text-base uppercase text-white tracking-24 hover:text-gray-100 hover:bg-gray-800 hover:bg-opacity-25 focus:outline-none focus:text-gray-100 focus:bg-gray-800 focus:bg-opacity-25 transition duration-150 ease-in-out">
+											Projects
+										</a>
+									</Link>
 
-									<a
-										href="#"
-										className="block px-3 py-2 text-base uppercase text-white tracking-24 hover:text-gray-100 hover:bg-gray-800 hover:bg-opacity-25 focus:outline-none focus:text-gray-100 focus:bg-gray-800 focus:bg-opacity-25 transition duration-150 ease-in-out"
-									>
-										Skills
-									</a>
+									<Link href="/skills">
+										<a className="block px-3 py-2 text-base uppercase text-white tracking-24 hover:text-gray-100 hover:bg-gray-800 hover:bg-opacity-25 focus:outline-none focus:text-gray-100 focus:bg-gray-800 focus:bg-opacity-25 transition duration-150 ease-in-out">
+											Skills
+										</a>
+									</Link>
 
-									<a
-										href="#"
-										className="block px-3 py-2 text-base uppercase text-white tracking-24 hover:text-gray-100 hover:bg-gray-800 hover:bg-opacity-25 focus:outline-none focus:text-gray-100 focus:bg-gray-800 focus:bg-opacity-25 transition duration-150 ease-in-out"
-									>
-										English
-									</a>
-
-									<a
-										href="#"
-										className="block mt-8 px-3 py-2 text-base uppercase text-center text-white tracking-24 border-2 border-white hover:text-gray-900 hover:bg-white focus:outline-none focus:text-gray-900 focus:bg-white transition duration-150 ease-in-out"
-									>
-										Contact me
-									</a>
+									<Link href="/contact-me">
+										<a className="block mt-8 px-3 py-2 text-base uppercase text-center text-white tracking-24 border-2 border-white hover:text-gray-900 hover:bg-white focus:outline-none focus:text-gray-900 focus:bg-white transition duration-150 ease-in-out">
+											Contact me
+										</a>
+									</Link>
 								</div>
 							</div>
 						</div>

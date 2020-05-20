@@ -1,4 +1,3 @@
-import { getPostBySlug, getPosts } from '../../lib/api/post';
 import markdownToHtml from '../../lib/markdownToHTML';
 import React, { useEffect } from 'react';
 import Navbar from '../../components/navbar';
@@ -8,9 +7,10 @@ import Head from 'next/head';
 import { APP_NAME } from '../../lib/constants';
 import Meta from '../../components/meta';
 import ArticleBody from '../../components/articleBody';
+import { getProjectBySlug, getProjects } from '../../lib/api/projects';
 const Prism = require('../../lib/prism');
 
-export default function Post({ post }) {
+export default function Project({ project }) {
 	useEffect(() => {
 		Prism.highlightAll();
 	}, []);
@@ -20,9 +20,9 @@ export default function Post({ post }) {
 			<Meta />
 			<Head>
 				<title>
-					{post.title} | {APP_NAME} Blog
+					{project.title} | {APP_NAME} Blog
 				</title>
-				<meta property="og:image" content={post.ogImage.url} />
+				<meta property="og:image" content={project.ogImage.url} />
 			</Head>
 
 			<div className="relative overflow-hidden text-white">
@@ -31,19 +31,19 @@ export default function Post({ post }) {
 				<header className="max-w-screen-lg mx-auto">
 					<div className="max-w-2xl mx-auto px-4">
 						<h1 className="leading-tight text-2xl md:text-4xl">
-							{post.title}
+							{project.title}
 						</h1>
-						<DateFormatter dateString={post.date} />
+						<DateFormatter dateString={project.date} />
 					</div>
 
 					<img
 						className="max-w-screen-lg mx-auto mt-4 h-72 w-full object-cover object-center sm:h-96 sm:mt-10"
-						src={post.headerImage}
-						alt={post.imageAlt}
+						src={project.headerImage}
+						alt={project.imageAlt}
 					/>
 				</header>
 
-				<ArticleBody content={post.content} />
+				<ArticleBody content={project.content} />
 
 				<Footer />
 			</div>
@@ -52,7 +52,7 @@ export default function Post({ post }) {
 }
 
 export async function getStaticProps({ params }) {
-	const post = getPostBySlug(params.slug, [
+	const project = getProjectBySlug(params.slug, [
 		'title',
 		'date',
 		'slug',
@@ -61,12 +61,12 @@ export async function getStaticProps({ params }) {
 		'coverImage',
 		'headerImage',
 	]);
-	const content = await markdownToHtml(post.content || '');
+	const content = await markdownToHtml(project.content || '');
 
 	return {
 		props: {
-			post: {
-				...post,
+			project: {
+				...project,
 				content,
 			},
 		},
@@ -74,13 +74,13 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-	const posts = getPosts(['slug']);
+	const projects = getProjects(['slug']);
 
 	return {
-		paths: posts.map((posts) => {
+		paths: projects.map((projects) => {
 			return {
 				params: {
-					slug: posts.slug,
+					slug: projects.slug,
 				},
 			};
 		}),

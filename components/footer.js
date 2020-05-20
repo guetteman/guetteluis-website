@@ -16,30 +16,28 @@ export default function Footer() {
 					</a>
 				</Link>
 
-				<a
-					href="#"
-					className="relative nav-link p-4 text-white text-sm uppercase tracking-24 sm:p-2"
-				>
-					Projects
-				</a>
+				<Link href="/projects">
+					<a className="relative nav-link p-4 text-white text-sm uppercase tracking-24 sm:p-2">
+						Projects
+					</a>
+				</Link>
 
-				<a
-					href="#"
-					className="relative nav-link p-4 text-white text-sm uppercase tracking-24 sm:p-2"
-				>
-					Skills
-				</a>
+				<Link href="/skills">
+					<a className="relative nav-link p-4 text-white text-sm uppercase tracking-24 sm:p-2">
+						Skills
+					</a>
+				</Link>
 
-				<a
-					href="#"
-					className="relative nav-link p-4 text-white text-sm uppercase tracking-24 sm:p-2"
-				>
-					Contact me
-				</a>
+				<Link href="/contact-me">
+					<a className="relative nav-link p-4 text-white text-sm uppercase tracking-24 sm:p-2">
+						Contact me
+					</a>
+				</Link>
 			</div>
 			<div className="relative mt-8 flex items-center justify-center space-x-16">
 				<a
-					href="#"
+					href="https://github.com/guetteman"
+					target="_blank"
 					className="py-2 text-white transform hover:scale-105 focus:scale-105 transition duration-200 ease-in-out"
 				>
 					<svg
@@ -56,7 +54,8 @@ export default function Footer() {
 				</a>
 
 				<a
-					href="#"
+					href="https://twitter.com/guetteman"
+					target="_blank"
 					className="py-2 text-white transform hover:scale-105 focus:scale-105 transition duration-200 ease-in-out"
 				>
 					<svg
