@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Link from 'next/link';
 
 export default function Footer() {
 	return (
@@ -6,12 +7,14 @@ export default function Footer() {
 			<div className="hidden absolute z-0 w-full h-64 bg-gray-800 opacity-50 transform sm:block sm:w-1/2 sm:translate-x-1/2 sm:translate-y-24" />
 
 			<div className="relative flex flex-wrap items-center justify-center sm:space-x-10">
-				<a
-					href="#"
-					className="relative nav-link p-4 text-white text-sm uppercase tracking-24 sm:p-2"
-				>
-					Blog
-				</a>
+				<Link href="/blog">
+					<a
+						href="#"
+						className="relative nav-link p-4 text-white text-sm uppercase tracking-24 sm:p-2"
+					>
+						Blog
+					</a>
+				</Link>
 
 				<a
 					href="#"

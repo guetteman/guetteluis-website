@@ -27,7 +27,10 @@ export default function Blog({ posts, firstPost }) {
 					/>
 
 					<div className="px-4 mt-4 w-full md:w-2/3 md:mt-10 lg:w-1/2 lg:px-0">
-						<Link href={`/blog/${firstPost.slug}`}>
+						<Link
+							href="/blog/[slug]"
+							as={`/blog/${firstPost.slug}`}
+						>
 							<a className="leading-tight text-2xl font-medium hover:underline md:text-4xl">
 								{firstPost.title}
 							</a>
