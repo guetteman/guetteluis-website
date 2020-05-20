@@ -5,10 +5,12 @@ import LatestPosts from '../components/posts/latestPosts';
 import { getPosts } from '../lib/api/post';
 import Footer from '../components/footer';
 import Head from 'next/head';
-import { APP_NAME, HOME_OG_IMAGE_URL } from '../lib/constants';
+import { APP_NAME } from '../lib/constants';
 import Meta from '../components/meta';
+import SkillsGrid from '../components/skills/skillsGrid';
+import { getRandomSkills } from '../lib/api/skills';
 
-export default function App({ posts }) {
+export default function App({ posts, skills }) {
 	const [topPosition, setTopPosition] = useState(-60);
 
 	const handleScroll = () => {
@@ -328,182 +330,7 @@ export default function App({ posts }) {
 						</span>
 					</h2>
 
-					<div className="mt-10 mx-auto max-w-xl grid grid-cols-1 gap-8 md:max-w-3xl md:grid-cols-2 lg:max-w-screen-xl lg:grid-cols-3">
-						<div className="relative flex items-center">
-							<div className="absolute w-16 h-16 bg-gray-800 shadow-lg rounded-full">
-								<img
-									className="h-full p-4 object-contain object-center"
-									src="/assets/logos/laravel-logo.svg"
-									alt="Laravel logo"
-								/>
-							</div>
-
-							<div className="ml-8 pl-12 p-4 bg-dark-card-gradient shadow-lg md:h-64">
-								<h3 className="font-bold text-lg">Laravel</h3>
-								<p className="mt-4">
-									Called the ”<b>PHP</b> framework for web
-									artisans". It is one of the best web
-									frameworks out there to make web
-									development.
-								</p>
-
-								<div className="relative h-10" />
-								<div className="absolute bottom-0 right-0 pb-4 pr-4">
-									<a
-										href="#"
-										className="mt-4 p-1 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out"
-									>
-										More
-									</a>
-								</div>
-							</div>
-						</div>
-						<div className="relative flex items-center">
-							<div className="absolute w-16 h-16 bg-gray-800 shadow-lg rounded-full">
-								<img
-									className="h-full p-4 object-contain object-center"
-									src="/assets/logos/laravel-logo.svg"
-									alt="Laravel logo"
-								/>
-							</div>
-
-							<div className="ml-8 pl-12 p-4 bg-dark-card-gradient shadow-lg md:h-64">
-								<h3 className="font-bold text-lg">Laravel</h3>
-								<p className="mt-4">
-									Called the ”<b>PHP</b> framework for web
-									artisans". It is one of the best web
-									frameworks out there to make web
-									development.
-								</p>
-
-								<div className="relative h-10" />
-								<div className="absolute bottom-0 right-0 pb-4 pr-4">
-									<a
-										href="#"
-										className="mt-4 p-1 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out"
-									>
-										More
-									</a>
-								</div>
-							</div>
-						</div>
-						<div className="relative flex items-center">
-							<div className="absolute w-16 h-16 bg-gray-800 shadow-lg rounded-full">
-								<img
-									className="h-full p-4 object-contain object-center"
-									src="/assets/logos/laravel-logo.svg"
-									alt="Laravel logo"
-								/>
-							</div>
-
-							<div className="ml-8 pl-12 p-4 bg-dark-card-gradient shadow-lg md:h-64">
-								<h3 className="font-bold text-lg">Laravel</h3>
-								<p className="mt-4">
-									Called the ”<b>PHP</b> framework for web
-									artisans". It is one of the best web
-									frameworks out there to make web
-									development.
-								</p>
-
-								<div className="relative h-10" />
-								<div className="absolute bottom-0 right-0 pb-4 pr-4">
-									<a
-										href="#"
-										className="mt-4 p-1 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out"
-									>
-										More
-									</a>
-								</div>
-							</div>
-						</div>
-						<div className="relative flex items-center">
-							<div className="absolute w-16 h-16 bg-gray-800 shadow-lg rounded-full">
-								<img
-									className="h-full p-4 object-contain object-center"
-									src="/assets/logos/laravel-logo.svg"
-									alt="Laravel logo"
-								/>
-							</div>
-
-							<div className="ml-8 pl-12 p-4 bg-dark-card-gradient shadow-lg md:h-64">
-								<h3 className="font-bold text-lg">Laravel</h3>
-								<p className="mt-4">
-									Called the ”<b>PHP</b> framework for web
-									artisans". It is one of the best web
-									frameworks out there to make web
-									development.
-								</p>
-
-								<div className="relative h-10" />
-								<div className="absolute bottom-0 right-0 pb-4 pr-4">
-									<a
-										href="#"
-										className="mt-4 p-1 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out"
-									>
-										More
-									</a>
-								</div>
-							</div>
-						</div>
-						<div className="relative flex items-center">
-							<div className="absolute w-16 h-16 bg-gray-800 shadow-lg rounded-full">
-								<img
-									className="h-full p-4 object-contain object-center"
-									src="/assets/logos/laravel-logo.svg"
-									alt="Laravel logo"
-								/>
-							</div>
-
-							<div className="ml-8 pl-12 p-4 bg-dark-card-gradient shadow-lg md:h-64">
-								<h3 className="font-bold text-lg">Laravel</h3>
-								<p className="mt-4">
-									Called the ”<b>PHP</b> framework for web
-									artisans". It is one of the best web
-									frameworks out there to make web
-									development.
-								</p>
-
-								<div className="relative h-10" />
-								<div className="absolute bottom-0 right-0 pb-4 pr-4">
-									<a
-										href="#"
-										className="mt-4 p-1 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out"
-									>
-										More
-									</a>
-								</div>
-							</div>
-						</div>
-						<div className="relative flex items-center">
-							<div className="absolute w-16 h-16 bg-gray-800 shadow-lg rounded-full">
-								<img
-									className="h-full p-4 object-contain object-center"
-									src="/assets/logos/laravel-logo.svg"
-									alt="Laravel logo"
-								/>
-							</div>
-
-							<div className="ml-8 pl-12 p-4 bg-dark-card-gradient shadow-lg md:h-64">
-								<h3 className="font-bold text-lg">Laravel</h3>
-								<p className="mt-4">
-									Called the ”<b>PHP</b> framework for web
-									artisans". It is one of the best web
-									frameworks out there to make web
-									development.
-								</p>
-
-								<div className="relative h-10" />
-								<div className="absolute bottom-0 right-0 pb-4 pr-4">
-									<a
-										href="#"
-										className="mt-4 p-1 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out"
-									>
-										More
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
+					<SkillsGrid skills={skills} />
 
 					<div className="mt-12 text-center">
 						<a
@@ -530,6 +357,7 @@ export async function getStaticProps({ params }) {
 	return {
 		props: {
 			posts: posts,
+			skills: getRandomSkills(6),
 		},
 	};
 }

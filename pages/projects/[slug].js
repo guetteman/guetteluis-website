@@ -20,7 +20,7 @@ export default function Project({ project }) {
 			<Meta />
 			<Head>
 				<title>
-					{project.title} | {APP_NAME} Blog
+					{project.title} | {APP_NAME} Projects
 				</title>
 				<meta property="og:image" content={project.ogImage.url} />
 			</Head>
