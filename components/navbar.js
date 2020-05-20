@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Transition from '../helpers/Transition';
-import Link from 'next/link';
+import Link from './link';
 
 export default function Navbar() {
 	const [showMenu, setShowMenu] = useState(false);

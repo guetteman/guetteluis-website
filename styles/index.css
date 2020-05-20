@@ -37,7 +37,6 @@
     right: 25%;
 }
 
-.nav-link:hover:after {
+.nav-link.selected:after, .nav-link:hover:after {
     @apply opacity-100;
-
 }
