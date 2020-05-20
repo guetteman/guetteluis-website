@@ -20,8 +20,14 @@ export default function Projects({ projects, firstProject }) {
 				<Navbar />
 
 				<div className="max-w-screen-lg mx-auto">
+					<h1 className="text-center font-light text-3xl leading-relaxed lg:text-5xl">
+						<span className="uppercase font-bold tracking-10">
+							My latest projects
+						</span>
+					</h1>
+
 					<img
-						className="h-72 w-full object-cover object-center sm:h-96"
+						className="mt-10 h-72 w-full object-cover object-center sm:h-96"
 						src={firstProject.headerImage}
 						alt={firstProject.imageAlt}
 					/>
