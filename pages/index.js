@@ -9,8 +9,11 @@ import { APP_NAME } from '../lib/constants';
 import Meta from '../components/meta';
 import SkillsGrid from '../components/skills/skillsGrid';
 import { getRandomSkills } from '../lib/api/skills';
+import Link from 'next/link';
+import { getProjects } from '../lib/api/projects';
+import ProjectsGrid from '../components/projects/projectsGrid';
 
-export default function App({ posts, skills }) {
+export default function App({ posts, projects, skills }) {
 	const [topPosition, setTopPosition] = useState(-60);
 
 	const handleScroll = () => {
@@ -53,18 +56,16 @@ export default function App({ posts, skills }) {
 						</p>
 
 						<div className="mt-10 flex flex-wrap justify-center items-center sm:space-x-4 md:justify-start">
-							<a
-								href="#"
-								className="block w-full p-4 uppercase text-sm text-center tracking-24 bg-white text-gray-900 border-2 border-white hover:shadow-lg focus:shadow-lg transition duration-150 ease-in-out sm:w-48 md:w-auto"
-							>
-								My projects
-							</a>
-							<a
-								href="#"
-								className="block w-full mt-4 p-4 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out sm:w-48 sm:mt-0 md:w-auto"
-							>
-								My blog
-							</a>
+							<Link href="/projects">
+								<a className="block w-full p-4 uppercase text-sm text-center tracking-24 bg-white text-gray-900 border-2 border-white hover:shadow-lg focus:shadow-lg transition duration-150 ease-in-out sm:w-48 md:w-auto">
+									My projects
+								</a>
+							</Link>
+							<Link href="/blog">
+								<a className="block w-full mt-4 p-4 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out sm:w-48 sm:mt-0 md:w-auto">
+									My blog
+								</a>
+							</Link>
 						</div>
 					</div>
 
@@ -156,31 +157,12 @@ export default function App({ posts, skills }) {
 
 						<LatestPosts posts={posts} />
 
-						<div className="relative w-full pt-4 px-4 text-center md:pt-10 lg:pt-12">
-							<p className="font-light">Learn more about</p>
-
-							<div className="flex flex-wrap justify-center space-x-4">
-								<a
-									href="#"
-									className="relative nav-link py-2 text-white font-medium uppercase tracking-24"
-								>
-									Mobility
+						<div className="relative w-full pt-20 text-center">
+							<Link href="/blog">
+								<a className="mt-4 py-4 px-8 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out">
+									My blog
 								</a>
-
-								<a
-									href="#"
-									className="relative nav-link py-2 text-white font-medium uppercase tracking-24"
-								>
-									Web development
-								</a>
-
-								<a
-									href="#"
-									className="relative nav-link py-2 text-white font-medium uppercase tracking-24"
-								>
-									Design
-								</a>
-							</div>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -203,116 +185,14 @@ export default function App({ posts, skills }) {
 						</span>
 					</h2>
 
-					<div className="relative mt-10 mx-auto max-w-md grid grid-cols-1 gap-8 md:max-w-4xl md:grid-cols-2 md:gap-4 lg:max-w-4xl lg:gap-10">
-						<div className="flex max-w-md bg-dark-card-gradient shadow-lg">
-							<img
-								className="h-64 w-1/2 object-cover object center"
-								src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&h=500&q=60"
-								alt=""
-							/>
-							<div className="relative w-1/2 p-4">
-								<h3 className="font-bold">
-									Swim - A geolocalized social network
-								</h3>
-								<p className="text-sm mt-2">
-									Development of the main website for Swim,
-									built in Laravel and Wink
-								</p>
-
-								<div className="absolute pb-4 pr-4 bottom-0 right-0">
-									<a
-										href="#"
-										className="mt-4 p-1 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out"
-									>
-										More
-									</a>
-								</div>
-							</div>
-						</div>
-						<div className="flex max-w-md bg-dark-card-gradient shadow-lg">
-							<img
-								className="h-64 w-1/2 object-cover object center"
-								src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&h=500&q=60"
-								alt=""
-							/>
-							<div className="relative w-1/2 p-4">
-								<h3 className="font-bold">
-									Swim - A geolocalized social network
-								</h3>
-								<p className="text-sm mt-2">
-									Development of the main website for Swim,
-									built in Laravel and Wink
-								</p>
-
-								<div className="absolute pb-4 pr-4 bottom-0 right-0">
-									<a
-										href="#"
-										className="mt-4 p-1 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out"
-									>
-										More
-									</a>
-								</div>
-							</div>
-						</div>
-						<div className="flex max-w-md bg-dark-card-gradient shadow-lg">
-							<img
-								className="h-64 w-1/2 object-cover object center"
-								src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&h=500&q=60"
-								alt=""
-							/>
-							<div className="relative w-1/2 p-4">
-								<h3 className="font-bold">
-									Swim - A geolocalized social network
-								</h3>
-								<p className="text-sm mt-2">
-									Development of the main website for Swim,
-									built in Laravel and Wink
-								</p>
-
-								<div className="absolute pb-4 pr-4 bottom-0 right-0">
-									<a
-										href="#"
-										className="mt-4 p-1 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out"
-									>
-										More
-									</a>
-								</div>
-							</div>
-						</div>
-						<div className="flex max-w-md bg-dark-card-gradient shadow-lg">
-							<img
-								className="h-64 w-1/2 object-cover object center"
-								src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&h=500&q=60"
-								alt=""
-							/>
-							<div className="relative w-1/2 p-4">
-								<h3 className="font-bold">
-									Swim - A geolocalized social network
-								</h3>
-								<p className="text-sm mt-2">
-									Development of the main website for Swim,
-									built in Laravel and Wink
-								</p>
-
-								<div className="absolute pb-4 pr-4 bottom-0 right-0">
-									<a
-										href="#"
-										className="mt-4 p-1 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out"
-									>
-										More
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
+					<ProjectsGrid projects={projects} />
 
 					<div className="relative mt-12 text-center">
-						<a
-							href="#"
-							className="mt-4 py-4 px-8 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out"
-						>
-							My blog
-						</a>
+						<Link href="/projects">
+							<a className="mt-4 py-4 px-8 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out">
+								My projects
+							</a>
+						</Link>
 					</div>
 				</div>
 
@@ -333,12 +213,11 @@ export default function App({ posts, skills }) {
 					<SkillsGrid skills={skills} />
 
 					<div className="mt-12 text-center">
-						<a
-							href="#"
-							className="mt-4 py-4 px-8 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out"
-						>
-							All my skills
-						</a>
+						<Link href="/skills">
+							<a className="mt-4 py-4 px-8 uppercase text-sm text-center tracking-24 border-2 border-white text-white hover:bg-white hover:text-gray-900 focus:bg-white focus:text-gray-900 transition duration-150 ease-in-out">
+								All my skills
+							</a>
+						</Link>
 					</div>
 				</div>
 
@@ -354,9 +233,23 @@ export async function getStaticProps({ params }) {
 		3
 	);
 
+	const projects = getProjects(
+		[
+			'title',
+			'date',
+			'slug',
+			'coverImage',
+			'headerImage',
+			'imageAlt',
+			'excerpt',
+		],
+		4
+	);
+
 	return {
 		props: {
 			posts: posts,
+			projects: projects,
 			skills: getRandomSkills(6),
 		},
 	};
