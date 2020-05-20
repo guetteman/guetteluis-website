@@ -48,12 +48,11 @@ export default function Navbar() {
 							</div>
 						</div>
 						<div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-							<a
-								href="#"
-								className="relative nav-link py-2 text-white text-sm uppercase tracking-24"
-							>
-								Blog
-							</a>
+							<Link href="/blog">
+								<a className="relative nav-link py-2 text-white text-sm uppercase tracking-24">
+									Blog
+								</a>
+							</Link>
 
 							<a
 								href="#"
