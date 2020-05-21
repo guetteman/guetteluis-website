@@ -1,7 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-	purge: ['./pages/**/*.js'],
+	purge: ['./pages/**/*.js', './components/**/*.js'],
 	theme: {
 		extend: {
 			letterSpacing: {
