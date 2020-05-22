@@ -83,7 +83,7 @@ export default function App({ posts, projects, skills }) {
 
 				<div className="relative mt-20 pl-4 pr-8 text-white max-w-4xl mx-auto sm:mt-32 lg:max-w-6xl">
 					<div
-						className="absolute z-0 bg-gray-800 opacity-50 transform translate-y-40 translate-x-40 right-0"
+						className="hidden absolute z-0 bg-gray-800 opacity-50 transform translate-y-40 translate-x-40 right-0 lg:block"
 						style={{
 							top: topPosition + 'px',
 							height: '1200px',
@@ -133,7 +133,7 @@ export default function App({ posts, projects, skills }) {
 
 				<div className="relative text-white mt-20 max-w-6xl mx-auto sm:mt-32">
 					<div
-						className="absolute z-0 left-0 bg-gray-800 opacity-50 transform translate-y-64"
+						className="hidden absolute z-0 left-0 bg-gray-800 opacity-50 transform translate-y-64 lg:block"
 						style={{
 							top: topPosition + 400 + 'px',
 							height: '1000px',
@@ -169,7 +169,7 @@ export default function App({ posts, projects, skills }) {
 
 				<div className="relative text-white mt-20 px-4 max-w-6xl mx-auto sm:mt-32">
 					<div
-						className="absolute z-0 bg-gray-800 opacity-50 transform translate-y-64 right-0"
+						className="hidden absolute z-0 bg-gray-800 opacity-50 transform translate-y-64 right-0 lg:block"
 						style={{
 							top: topPosition + 400 + 'px',
 							height: '1100px',

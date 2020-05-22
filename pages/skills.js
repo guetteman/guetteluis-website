@@ -15,7 +15,7 @@ export default function Skills({ skills }) {
 				<title>Skills | {APP_NAME}</title>
 			</Head>
 
-			<div className="relative overflow-hidden text-white">
+			<div className="relative overflow-hidden text-white px-2">
 				<Navbar />
 
 				<div className="max-w-2xl mx-auto">

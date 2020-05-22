@@ -69,7 +69,9 @@ export default () => {
 				<title>Contact Me | {APP_NAME}</title>
 			</Head>
 			<div className="relative overflow-x-hidden h-screen text-white mx-auto max-w-screen-xl">
-				<Navbar />
+				<div className="relative z-10">
+					<Navbar />
+				</div>
 
 				<div
 					className="hidden absolute z-0 bg-gray-800 opacity-50 transform lg:block"
@@ -143,8 +145,8 @@ export default () => {
 						)}
 					</div>
 				</form>
+				<Footer />
 			</div>
-			<Footer />
 		</>
 	);
 };
