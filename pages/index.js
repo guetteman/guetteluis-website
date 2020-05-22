@@ -5,7 +5,7 @@ import LatestPosts from '../components/posts/latestPosts';
 import { getPosts } from '../lib/api/post';
 import Footer from '../components/footer';
 import Head from 'next/head';
-import { APP_NAME } from '../lib/constants';
+import { APP_NAME, HOME_OG_IMAGE_URL } from '../lib/constants';
 import Meta from '../components/meta';
 import SkillsGrid from '../components/skills/skillsGrid';
 import { getRandomSkills } from '../lib/api/skills';
@@ -34,6 +34,12 @@ export default function App({ posts, projects, skills }) {
 			<Meta />
 			<Head>
 				<title>{APP_NAME}</title>
+				<meta property="og:title" content={APP_NAME} />
+				<meta
+					property="og:description"
+					content={`${APP_NAME} personal website.`}
+				/>
+				<meta property="og:image" content={HOME_OG_IMAGE_URL} />
 			</Head>
 
 			<div className="relative overflow-hidden">

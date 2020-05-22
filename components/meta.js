@@ -40,7 +40,6 @@ export default function Meta() {
 				name="description"
 				content={`${APP_NAME} personal website.`}
 			/>
-			<meta property="og:image" content={HOME_OG_IMAGE_URL} />
 			<meta name="twitter:card" content="summary_large_image" />
 		</Head>
 	);
