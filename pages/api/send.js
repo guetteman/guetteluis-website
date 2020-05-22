@@ -6,8 +6,8 @@ export default async function (req, res) {
 	const { email, message } = req.body;
 
 	const content = {
-		to: process.env.EMAIL_ADDRESS,
-		from: email,
+		to: process.env.TO_EMAIL_ADDRESS,
+		from: process.env.FROM_EMAIL_ADDRESS,
 		subject: `New Message From - ${email}`,
 		text: message,
 		html: `<p>${message}</p>`,
