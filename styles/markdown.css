@@ -163,7 +163,8 @@ h4.markdown {
 .markdown > h2 > code,
 .markdown > h3 > code,
 .markdown > h4 > code {
-    @apply text-purple-600;
+    @apply text-indigo-400;
+    background-color: #3C366B !important;
     @apply font-mono;
 }
 .markdown > h3 > code {
@@ -240,6 +241,6 @@ pre code.markdown,
 }
 
 .markdown > p > img {
-    height: 500px;
+    max-height: 500px;
     @apply w-full object-contain object-center;
 }
