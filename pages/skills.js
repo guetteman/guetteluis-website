@@ -37,6 +37,15 @@ export default function Skills({ skills }) {
 
 				<SkillsGrid skills={skills} />
 
+				<div className="mt-10 max-w-2xl mx-auto">
+					<p className="mt-10 text-center">
+						And many more... I've learned that the key is to be
+						constantly learning and testing in new projects. That's
+						the way you connect dots, create new things, and learn
+						more.
+					</p>
+				</div>
+
 				<Footer />
 			</div>
 		</>

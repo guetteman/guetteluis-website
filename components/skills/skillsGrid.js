@@ -5,7 +5,7 @@ export default function SkillsGrid({ skills }) {
 		<div className="mt-10 mx-auto max-w-xl grid grid-cols-1 gap-8 md:max-w-3xl md:grid-cols-2 lg:max-w-screen-xl lg:grid-cols-3">
 			{skills.map((skill) => (
 				<div key={skill.name} className="relative flex items-center">
-					<div className="absolute w-16 h-16 bg-gray-800 shadow-lg rounded-full">
+					<div className="absolute w-16 h-16 bg-gray-800 shadow-lg rounded-full flex justify-center items-center">
 						<img
 							className="h-full p-4 object-contain object-center"
 							src={skill.logo}
