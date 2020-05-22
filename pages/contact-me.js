@@ -68,7 +68,7 @@ export default () => {
 			<Head>
 				<title>Contact Me | {APP_NAME}</title>
 			</Head>
-			<div className="relative overflow-x-hidden h-screen text-white mx-auto max-w-screen-xl">
+			<div className="relative overflow-hidden text-white mx-auto max-w-screen-xl">
 				<div className="relative z-10">
 					<Navbar />
 				</div>
