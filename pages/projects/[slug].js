@@ -23,6 +23,7 @@ export default function Project({ project }) {
 					{project.title} | {APP_NAME} Projects
 				</title>
 				<meta property="og:image" content={project.ogImage.url} />
+				<meta property="og:title" content={project.title} />
 			</Head>
 
 			<div className="relative overflow-hidden text-white">

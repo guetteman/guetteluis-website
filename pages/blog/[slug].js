@@ -5,7 +5,7 @@ import Navbar from '../../components/navbar';
 import DateFormatter from '../../components/dateFormatter';
 import Footer from '../../components/footer';
 import Head from 'next/head';
-import { APP_NAME } from '../../lib/constants';
+import { APP_NAME, HOME_OG_IMAGE_URL } from '../../lib/constants';
 import Meta from '../../components/meta';
 import ArticleBody from '../../components/articleBody';
 const Prism = require('../../lib/prism');
@@ -23,6 +23,7 @@ export default function Post({ post }) {
 					{post.title} | {APP_NAME} Blog
 				</title>
 				<meta property="og:image" content={post.ogImage.url} />
+				<meta property="og:title" content={post.title} />
 			</Head>
 
 			<div className="relative overflow-hidden text-white">
