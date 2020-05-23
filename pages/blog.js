@@ -27,12 +27,12 @@ export default function Blog({ posts, firstPost }) {
 					</h1>
 
 					<img
-						className="mt-10 h-72 w-full object-cover object-center sm:h-96"
+						className="mt-10 w-full"
 						src={firstPost.headerImage}
 						alt={firstPost.imageAlt}
 					/>
 
-					<div className="px-4 mt-4 w-full md:w-2/3 md:mt-10 lg:w-1/2 lg:px-0">
+					<div className="px-4 mt-4 w-full md:w-4/5 md:mt-10 lg:px-0">
 						<Link
 							href="/blog/[slug]"
 							as={`/blog/${firstPost.slug}`}

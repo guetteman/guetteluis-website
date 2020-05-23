@@ -38,7 +38,7 @@ export default function Post({ post }) {
 					</div>
 
 					<img
-						className="max-w-screen-lg mx-auto mt-4 h-72 w-full object-cover object-center sm:h-96 sm:mt-10"
+						className="max-w-screen-lg mx-auto mt-4 w-full sm:mt-10"
 						src={post.headerImage}
 						alt={post.imageAlt}
 					/>
