@@ -8,7 +8,7 @@ import Link from 'next/link';
 import Footer from '../components/footer';
 import { getProjects } from '../lib/api/projects';
 
-export default function Projects({ projects, firstProject }) {
+export default function Projects({ projects }) {
 	return (
 		<>
 			<Meta />
@@ -25,26 +25,6 @@ export default function Projects({ projects, firstProject }) {
 							My latest projects
 						</span>
 					</h1>
-
-					<img
-						className="mt-10 h-72 w-full object-cover object-center sm:h-96"
-						src={firstProject.headerImage}
-						alt={firstProject.imageAlt}
-					/>
-
-					<div className="px-4 mt-4 w-full md:w-2/3 md:mt-10 lg:w-1/2 lg:px-0">
-						<Link
-							href="/projects/[slug]"
-							as={`/projects/${firstProject.slug}`}
-						>
-							<a className="leading-tight text-2xl font-medium hover:underline md:text-4xl">
-								{firstProject.title}
-							</a>
-						</Link>
-						<p>
-							<DateFormatter dateString={firstProject.date} />
-						</p>
-					</div>
 				</div>
 
 				<div className="mt-10 mx-auto max-w-xl grid grid-cols-1 gap-4 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl lg:grid-cols-3 xl:max-w-screen-xl xl:grid-cols-4">
@@ -96,13 +76,9 @@ export async function getStaticProps({ params }) {
 		'imageAlt',
 	]);
 
-	const firstProject = projects[0];
-	projects.shift();
-
 	return {
 		props: {
 			projects: projects,
-			firstProject: firstProject,
 		},
 	};
 }
