@@ -191,7 +191,7 @@ select_random_images_by_classes(X_train, y_train, n_train)
 
 This code shows 43 random images (1 per class):
 
-![Random traffic sign images](/assets/blog/random-traffic-sign-images.png)
+![Random traffic sign images](/assets/blog/traffic-sign-recognition/random-traffic-sign-images.png)
 
 ### 6. The next thing to do is to see how the dataset is distributed. So, I used the next two code blocks to see in a bar chart the # Training Data vs Classes:
 
@@ -209,7 +209,7 @@ plot_distribution_chart(_classes, counts, 'Classes', '# Training Examples', 0.7,
 
 This will show the next chart:
 
-![# Training examples vs classes chart](/assets/blog/training-examples-vs-classes.png)
+![# Training examples vs classes chart](/assets/blog/traffic-sign-recognition/training-examples-vs-classes.png)
 
 
 ### 7. This chart shows us that this dataset is poorly distributed. So, I use some Augmentation techniques to improve the dataset distribution.
@@ -283,7 +283,7 @@ for i in range(0, 100):
 show_images(images)
 ```
 
-![Augmented traffic signs](/assets/blog/augmented-traffic-signs.png)
+![Augmented traffic signs](/assets/blog/traffic-sign-recognition/augmented-traffic-signs.png)
 
 So, from one image, we can create thousands of new images. This will make our dataset a more robust one.
 
@@ -314,7 +314,7 @@ So, in the existing dataset, I look for classes that has less than 1,000 of exam
 
 Now the dataset distribution has changed to this one:
 
-![Normalized training examples vs classes](/assets/blog/normalized-training-examples-vs-classes.png)
+![Normalized training examples vs classes](/assets/blog/traffic-sign-recognition/normalized-training-examples-vs-classes.png)
 
 Now we a more robust dataset!
 
@@ -341,7 +341,7 @@ X_valid_gray = np.sum(X_valid/3, axis=3, keepdims=True)
 select_random_images_by_classes(X_train_gray.squeeze(), y_train, n_train)
 ```
 
-![Gray random traffic sign images](/assets/blog/gray-random-traffic-sign-images.png)
+![Gray random traffic sign images](/assets/blog/traffic-sign-recognition/gray-random-traffic-sign-images.png)
 
 ### 9. According to [CS231](http://cs231n.github.io/neural-networks-2/#datapre) class, for images is not strictly necessary to apply normalization because the relative scales of pixels are already approximately equal, in range from 0 to 255. But I used mean substraction to centering the cloud of data around the origin along every dimension.
 
@@ -367,7 +367,7 @@ X_train, y_train = shuffle(X_train, y_train)
 
 ### 11. Now, we define the model Architecture, I decided to use the same LeNet architecture (with some modifications) used for MNIST dataset and test results. As it had a great accuracy I stayed with this one.
 
-![LeNet architecture](/assets/blog/lenet-architecture.png)
+![LeNet architecture](/assets/blog/traffic-sign-recognition/lenet-architecture.png)
 
 ```python
 import tensorflow as tf
@@ -574,7 +574,7 @@ X_images_test_gray -= np.mean(X_images_test_gray)
 X_images_test = X_images_test_gray
 ```
 
-![Traffic signs preprocessing](/assets/blog/traffic-signs-preprocessing.png)
+![Traffic signs preprocessing](/assets/blog/traffic-sign-recognition/traffic-signs-preprocessing.png)
 
 ### 15. Now I predict the sign type of each image
 
@@ -618,7 +618,7 @@ with tf.Session() as sess:
           axs[4*i+j+1].set_title('top guess: {} ({:.0f}%)'.format(guess, 100*my_top_k[0][i][j]))
 ```
 
-![Traffic sign recognition](/assets/blog/traffic-sign-recognition.png)
+![Traffic sign recognition](/assets/blog/traffic-sign-recognition/traffic-sign-recognition.png)
 
 My final model results were:
 
