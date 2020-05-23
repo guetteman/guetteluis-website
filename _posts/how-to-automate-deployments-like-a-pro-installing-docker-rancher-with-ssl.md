@@ -2,7 +2,7 @@
 title: 'How to Automate Deployments Like a Pro — Installing Docker Rancher with SSL'
 coverImage: '/assets/blog/how-to-automate-deployments-like-a-pro-installing-docker-rancher-with-ssl/how-to-automate-deployments-like-a-pro-installing-docker-rancher-with-ssl.png'
 headerImage: '/assets/blog/how-to-automate-deployments-like-a-pro-installing-docker-rancher-with-ssl/how-to-automate-deployments-like-a-pro-installing-docker-rancher-with-ssl.png'
-imageAlt: 'Code in a screen'
+imageAlt: 'Ship'
 date: '2018-12-24T05:35:07.322Z'
 ogImage:
   url: '/assets/blog/how-to-automate-deployments-like-a-pro-installing-docker-rancher-with-ssl/how-to-automate-deployments-like-a-pro-installing-docker-rancher-with-ssl.png'
