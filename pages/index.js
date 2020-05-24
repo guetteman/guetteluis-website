@@ -123,9 +123,9 @@ export default function App({ posts, projects, skills }) {
 						</p>
 						<p className="mt-10">
 							I see the future really interesting about
-							multiplatform development, so I've been working on{' '}
+							multiplatform development. So, I've been working on{' '}
 							<b>Flutter</b>, <b>React Native</b> and <b>Ionic</b>
-							. But without forgetting what I think is the most
+							; but without forgetting what I think is the most
 							important part of software development, the backend.
 							Every day look to improve my skills on writing
 							better code depending on the situation.
