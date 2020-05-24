@@ -18,9 +18,11 @@ export default function Projects({ projects }) {
 			</Head>
 
 			<div className="relative overflow-hidden text-white">
-				<Navbar />
+				<div className="relative z-10">
+					<Navbar />
+				</div>
 
-				<div className="max-w-screen-lg mx-auto">
+				<div className="relative max-w-screen-lg mx-auto">
 					<h1 className="text-center font-light text-3xl leading-relaxed lg:text-5xl">
 						<span className="uppercase font-bold tracking-10">
 							My latest projects
@@ -28,7 +30,7 @@ export default function Projects({ projects }) {
 					</h1>
 				</div>
 
-				<div className="mt-10 mx-auto max-w-xl grid grid-cols-1 gap-4 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl lg:grid-cols-3 xl:max-w-screen-xl xl:grid-cols-4">
+				<div className="relative mt-10 mx-auto max-w-xl grid grid-cols-1 gap-4 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl lg:grid-cols-3 xl:max-w-screen-xl xl:grid-cols-4">
 					{projects.map((project) => {
 						return (
 							<Link
