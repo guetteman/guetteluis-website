@@ -113,13 +113,12 @@ export default function App({ posts, projects, skills }) {
 						</p>
 						<p className="mt-10">
 							My main focus is on <b>web development</b> because I
-							think that right now is the most needed kind of
-							products in the world. I work mainly with{' '}
-							<b>Laravel</b>, <b>VueJS</b>, <b>React</b> but I'm
-							not limited to that, I think that one of the best
-							quality I have is that I keep learning new
-							technologies to improve my criteria about building
-							software products.
+							truly believe that right now there is a huge demand
+							on this field. I work mainly with <b>Laravel</b>,{' '}
+							<b>VueJS</b>, <b>React</b> but I'm not limited to
+							that, I think that one of the best quality I have is
+							that I keep learning new technologies to improve my
+							criteria about building software products.
 						</p>
 						<p className="mt-10">
 							I see the future really interesting about
@@ -127,8 +126,8 @@ export default function App({ posts, projects, skills }) {
 							<b>Flutter</b>, <b>React Native</b> and <b>Ionic</b>
 							; but without forgetting what I think is the most
 							important part of software development, the backend.
-							Every day look to improve my skills on writing
-							better code depending on the situation.
+							I work everyday to improve my coding skills and
+							focus in always having clean and organized code.
 						</p>
 						<p className="mt-10">
 							There are so many things that I've been working on
