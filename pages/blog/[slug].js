@@ -23,7 +23,10 @@ export default function Post({ post }) {
 				<title>
 					{post.title} | {APP_NAME} Blog
 				</title>
-				<meta property="og:image" content={post.ogImage.url} />
+				<meta
+					property="og:image"
+					content={`${process.env.APP_URL}${post.ogImage.url}`}
+				/>
 				<meta property="og:title" content={post.title} />
 			</Head>
 

@@ -4,7 +4,7 @@ import Navbar from '../../components/navbar';
 import DateFormatter from '../../components/dateFormatter';
 import Footer from '../../components/footer';
 import Head from 'next/head';
-import { APP_NAME } from '../../lib/constants';
+import { APP_NAME, HOME_OG_IMAGE_URL } from '../../lib/constants';
 import Meta from '../../components/meta';
 import ArticleBody from '../../components/articleBody';
 import { getProjectBySlug, getProjects } from '../../lib/api/projects';
@@ -23,7 +23,10 @@ export default function Project({ project }) {
 				<title>
 					{project.title} | {APP_NAME} Projects
 				</title>
-				<meta property="og:image" content={project.ogImage.url} />
+				<meta
+					property="og:image"
+					content={`${process.env.APP_URL}${project.ogImage.url}`}
+				/>
 				<meta property="og:title" content={project.title} />
 			</Head>
 
