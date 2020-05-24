@@ -1,5 +1,6 @@
 ---
 title: "Swim's App"
+excerpt: "The social network of the next generation."
 coverImage: '/assets/projects/swim-app/swim-app.png'
 headerImage: '/assets/projects/swim-app/swim-app.png'
 imageAlt: "Swim's website"

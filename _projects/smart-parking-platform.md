@@ -1,5 +1,6 @@
 ---
 title: 'Smart Parking Platform'
+excerpt: "This project was built to manage parking lot in a port of Spain."
 coverImage: '/assets/projects/smart-parking-platform/zone.png'
 headerImage: '/assets/projects/smart-parking-platform/zone.png'
 imageAlt: 'Smart parking platform'
