@@ -12,6 +12,7 @@ import { getRandomSkills } from '../lib/api/skills';
 import Link from 'next/link';
 import { getProjects } from '../lib/api/projects';
 import ProjectsGrid from '../components/projects/projectsGrid';
+import Layout from '../components/layout';
 
 export default function App({ posts, projects, skills }) {
 	const [topPosition, setTopPosition] = useState(-60);
@@ -30,7 +31,7 @@ export default function App({ posts, projects, skills }) {
 	}, []);
 
 	return (
-		<>
+		<Layout>
 			<Meta />
 			<Head>
 				<title>{APP_NAME}</title>
@@ -229,7 +230,7 @@ export default function App({ posts, projects, skills }) {
 
 				<Footer />
 			</div>
-		</>
+		</Layout>
 	);
 }
 

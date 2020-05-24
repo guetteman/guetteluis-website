@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { APP_NAME } from '../lib/constants';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
+import Layout from '../components/layout';
 
 export default () => {
 	const [status, setStatus] = useState({
@@ -63,7 +64,7 @@ export default () => {
 	};
 
 	return (
-		<>
+		<Layout>
 			<Meta />
 			<Head>
 				<title>Contact Me | {APP_NAME}</title>
@@ -147,6 +148,6 @@ export default () => {
 				</form>
 				<Footer />
 			</div>
-		</>
+		</Layout>
 	);
 };

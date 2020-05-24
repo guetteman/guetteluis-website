@@ -8,6 +8,7 @@ import { APP_NAME } from '../../lib/constants';
 import Meta from '../../components/meta';
 import ArticleBody from '../../components/articleBody';
 import { getProjectBySlug, getProjects } from '../../lib/api/projects';
+import Layout from '../../components/layout';
 const Prism = require('../../lib/prism');
 
 export default function Project({ project }) {
@@ -16,7 +17,7 @@ export default function Project({ project }) {
 	}, []);
 
 	return (
-		<>
+		<Layout>
 			<Meta />
 			<Head>
 				<title>
@@ -48,7 +49,7 @@ export default function Project({ project }) {
 
 				<Footer />
 			</div>
-		</>
+		</Layout>
 	);
 }
 

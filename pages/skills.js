@@ -6,10 +6,11 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import { SKILLS } from '../_skills/skills';
 import SkillsGrid from '../components/skills/skillsGrid';
+import Layout from '../components/layout';
 
 export default function Skills({ skills }) {
 	return (
-		<>
+		<Layout>
 			<Meta />
 			<Head>
 				<title>Skills | {APP_NAME}</title>
@@ -48,7 +49,7 @@ export default function Skills({ skills }) {
 
 				<Footer />
 			</div>
-		</>
+		</Layout>
 	);
 }
 

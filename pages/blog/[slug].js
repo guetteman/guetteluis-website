@@ -8,6 +8,7 @@ import Head from 'next/head';
 import { APP_NAME, HOME_OG_IMAGE_URL } from '../../lib/constants';
 import Meta from '../../components/meta';
 import ArticleBody from '../../components/articleBody';
+import Layout from '../../components/layout';
 const Prism = require('../../lib/prism');
 
 export default function Post({ post }) {
@@ -16,7 +17,7 @@ export default function Post({ post }) {
 	}, []);
 
 	return (
-		<>
+		<Layout>
 			<Meta />
 			<Head>
 				<title>
@@ -48,7 +49,7 @@ export default function Post({ post }) {
 
 				<Footer />
 			</div>
-		</>
+		</Layout>
 	);
 }
 

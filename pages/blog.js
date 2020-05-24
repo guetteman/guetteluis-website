@@ -7,10 +7,11 @@ import { getPosts } from '../lib/api/post';
 import DateFormatter from '../components/dateFormatter';
 import Link from 'next/link';
 import Footer from '../components/footer';
+import Layout from '../components/layout';
 
 export default function Blog({ posts, firstPost }) {
 	return (
-		<>
+		<Layout>
 			<Meta />
 			<Head>
 				<title>Blog | {APP_NAME}</title>
@@ -82,7 +83,7 @@ export default function Blog({ posts, firstPost }) {
 
 				<Footer />
 			</div>
-		</>
+		</Layout>
 	);
 }
 

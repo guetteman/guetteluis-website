@@ -7,10 +7,11 @@ import DateFormatter from '../components/dateFormatter';
 import Link from 'next/link';
 import Footer from '../components/footer';
 import { getProjects } from '../lib/api/projects';
+import Layout from '../components/layout';
 
 export default function Projects({ projects }) {
 	return (
-		<>
+		<Layout>
 			<Meta />
 			<Head>
 				<title>Projects | {APP_NAME}</title>
@@ -62,7 +63,7 @@ export default function Projects({ projects }) {
 
 				<Footer />
 			</div>
-		</>
+		</Layout>
 	);
 }
 
