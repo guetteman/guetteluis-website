@@ -40,7 +40,10 @@ export default function App({ posts, projects, skills }) {
 					property="og:description"
 					content={`${APP_NAME} personal website.`}
 				/>
-				<meta property="og:image" content={HOME_OG_IMAGE_URL} />
+				<meta
+					property="og:image"
+					content={`${process.env.APP_URL}${HOME_OG_IMAGE_URL}`}
+				/>
 			</Head>
 
 			<div className="relative overflow-hidden">
