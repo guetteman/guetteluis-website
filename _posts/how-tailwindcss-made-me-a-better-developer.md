@@ -1,11 +1,11 @@
 ---
 title: 'How TailwindCSS made me a better developer'
-coverImage: 'https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80'
-headerImage: 'https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&h=700&q=80'
+coverImage: '/assets/blog/how-tailwindcss-made-me-a-better-developer/css-code.jpeg'
+headerImage: '/assets/blog/how-tailwindcss-made-me-a-better-developer/css-code.jpeg'
 imageAlt: 'CSS Code in a screen'
 date: '2020-05-20T05:35:07.322Z'
 ogImage:
-  url: 'https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80'
+  url: '/assets/blog/how-tailwindcss-made-me-a-better-developer/css-code.jpeg'
 ---
 
 When I started programming, I remember that I made my first website on Laravel [(Innotica)](https://innotica.net/) and I realized that CSS was hard.
