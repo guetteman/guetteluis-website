@@ -112,13 +112,15 @@ export default function App({ posts, projects, skills }) {
 							England, Italy, and so on.
 						</p>
 						<p className="mt-10">
-							My main focus is on <b>web development</b> because I
-							truly believe that right now there is a huge demand
-							on this field. I work mainly with <b>Laravel</b>,{' '}
-							<b>VueJS</b>, <b>React</b> but I'm not limited to
-							that, I think that one of the best quality I have is
-							that I keep learning new technologies to improve my
-							criteria about building software products.
+							My main focus is on{' '}
+							<b>building technology products</b> because I truly
+							believe that right now there is a huge demand on
+							this field. I work mainly with in software
+							development with <b>Laravel</b>, <b>VueJS</b>,{' '}
+							<b>React</b> but I'm not limited to that, I think
+							that one of the best quality I have is that I keep
+							learning new technologies to improve my criteria
+							about building products.
 						</p>
 						<p className="mt-10">
 							I see the future really interesting about
