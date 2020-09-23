@@ -112,24 +112,23 @@ export default function App({ posts, projects, skills }) {
 							England, Italy, and so on.
 						</p>
 						<p className="mt-10">
-							My main focus is on{' '}
-							<b>building technology products</b> because I truly
-							believe that right now there is a huge demand on
-							this field. I work mainly with in software
-							development with <b>Laravel</b>, <b>VueJS</b>,{' '}
-							<b>React</b> but I'm not limited to that, I think
-							that one of the best quality I have is that I keep
-							learning new technologies to improve my criteria
-							about building products.
+							My main focus is on building
+							<b>software products</b>. I work mainly with in
+							software development with <b>Laravel</b>,{' '}
+							<b>React</b>, <b>VueJS</b> but I'm not limited to
+							that, I think that one of the best quality I have is
+							that I keep learning new technologies, practices,
+							design patterns, to improve my criteria about
+							building software.
 						</p>
 						<p className="mt-10">
 							I see the future really interesting about
 							multiplatform development. So, I've been working on{' '}
-							<b>Flutter</b>, <b>React Native</b> and <b>Ionic</b>
-							; but without forgetting what I think is the most
-							important part of software development, the backend.
-							I work everyday to improve my coding skills and
-							focus in always having clean and organized code.
+							<b>Flutter</b>; but without forgetting what I think
+							is the most important part of software development,
+							the backend. I work everyday to improve my coding
+							skills and focus in always having clean and
+							organized code.
 						</p>
 						<p className="mt-10">
 							There are so many things that I've been working on
