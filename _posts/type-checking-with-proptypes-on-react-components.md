@@ -58,9 +58,16 @@ function Message({subject, greeting}) {
 }
 
 Greeting.propTypes = {
-    subject: PropTypes.string,
-    greeting: PropTypes.string
+    subject: PropTypes.element.isRequired,
+    greeting: PropTypes.element.isRequired
 };
+```
+
+And you will get this warning:
+
+```
+Warning: Failed prop type: The prop `subject` is marked as required in `Message`, but its value is `undefined`.
+    in Message
 ```
 
 Check more information in [Typechecking With PropTypes – React](https://reactjs.org/docs/typechecking-with-proptypes.html).
