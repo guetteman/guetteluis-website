@@ -42,7 +42,7 @@ Now, if we call the component without defining the `subject` prop:
 
 You will get the next warning:
 
-```
+```text
 Warning: Failed prop type: subject is in Message
 ```
 
@@ -65,7 +65,7 @@ Greeting.propTypes = {
 
 And you will get this warning:
 
-```
+```text
 Warning: Failed prop type: The prop `subject` is marked as required in `Message`, but its value is `undefined`.
     in Message
 ```
