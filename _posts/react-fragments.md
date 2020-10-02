@@ -9,7 +9,7 @@ ogImage:
 ---
 <span>Photo by <a href="https://unsplash.com/@brannon_naito?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Brannon Naito</a> on <a href="https://unsplash.com/s/photos/fragments?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 
-Let’s say that we want to set to elements site-by-side in a React component:
+Let’s say that we want to set to elements side-by-side in a React component:
 
 ```jsx
 function columns() {

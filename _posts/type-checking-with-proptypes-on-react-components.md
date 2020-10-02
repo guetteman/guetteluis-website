@@ -57,7 +57,7 @@ function Message({subject, greeting}) {
   return <div className="message">{greeting}, {subject}</div>;
 }
 
-Greeting.propTypes = {
+Message.propTypes = {
     subject: PropTypes.element.isRequired,
     greeting: PropTypes.element.isRequired
 };
