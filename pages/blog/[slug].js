@@ -16,6 +16,13 @@ export default function Post({ post }) {
 		Prism.highlightAll();
 	}, []);
 
+	function getImageLink() {
+		if (post.ogImage.url.includes('https://')) {
+			return post.ogImage.url;
+		}
+		return `${process.env.APP_URL}${post.ogImage.url}`;
+	}
+
 	return (
 		<Layout>
 			<Meta />
@@ -23,10 +30,7 @@ export default function Post({ post }) {
 				<title>
 					{post.title} | {APP_NAME} Blog
 				</title>
-				<meta
-					property="og:image"
-					content={`${process.env.APP_URL}${post.ogImage.url}`}
-				/>
+				<meta property="og:image" content={getImageLink()} />
 				<meta property="og:title" content={post.title} />
 			</Head>
 
