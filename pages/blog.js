@@ -1,7 +1,7 @@
 import React from 'react';
 import Meta from '../components/meta';
 import Head from 'next/head';
-import { APP_NAME } from '../lib/constants';
+import { APP_NAME, HOME_OG_IMAGE_URL } from '../lib/constants';
 import Navbar from '../components/navbar';
 import { getPosts } from '../lib/api/post';
 import DateFormatter from '../components/dateFormatter';
@@ -15,6 +15,12 @@ export default function Blog({ posts, firstPost }) {
 			<Meta />
 			<Head>
 				<title>Blog | {APP_NAME}</title>
+				<meta property="og:title" content={APP_NAME} />
+				<meta property="og:description" content={`${APP_NAME} blog.`} />
+				<meta
+					property="og:image"
+					content={`${process.env.APP_URL}${HOME_OG_IMAGE_URL}`}
+				/>
 			</Head>
 
 			<div className="relative overflow-hidden text-white">

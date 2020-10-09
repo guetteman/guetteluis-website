@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Meta from '../components/meta';
 import Head from 'next/head';
-import { APP_NAME } from '../lib/constants';
+import { APP_NAME, HOME_OG_IMAGE_URL } from '../lib/constants';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import Layout from '../components/layout';
@@ -68,6 +68,15 @@ export default () => {
 			<Meta />
 			<Head>
 				<title>Contact Me | {APP_NAME}</title>
+				<meta property="og:title" content={APP_NAME} />
+				<meta
+					property="og:description"
+					content={`${APP_NAME} - Contact me.`}
+				/>
+				<meta
+					property="og:image"
+					content={`${process.env.APP_URL}${HOME_OG_IMAGE_URL}`}
+				/>
 			</Head>
 			<div className="relative overflow-hidden text-white mx-auto max-w-screen-xl">
 				<div className="relative z-10">

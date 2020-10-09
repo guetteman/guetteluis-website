@@ -42,10 +42,6 @@ export default function Meta() {
 			/>
 			<meta property="og:url" content={process.env.APP_URL} />
 			<meta property="og:type" content="website" />
-			<meta
-				property="og:image"
-				content={`${process.env.APP_URL}${HOME_OG_IMAGE_URL}`}
-			/>
 			<meta name="twitter:card" content="summary_large_image" />
 		</Head>
 	);
