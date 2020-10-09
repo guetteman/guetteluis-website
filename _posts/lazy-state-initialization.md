@@ -54,7 +54,7 @@ function Counter({initialValue}) {
   function initializeCounter() {
     return initialValue || Math.floor(Math.random() * 100)
   }
-  const [counter, setCounter] = useState(initializeCounter());
+  const [counter, setCounter] = useState(initializeCounter);
 
 
   function incrementCounter() {
