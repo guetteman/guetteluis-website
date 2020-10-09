@@ -1,11 +1,11 @@
 ---
 title: 'Lazy state initialization'
-coverImage: 'https://images.unsplash.com/photo-1524125833033-bc59e523d3e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'
-headerImage: 'https://images.unsplash.com/photo-1524125833033-bc59e523d3e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'
+coverImage: '/assets/blog/lazy-state-initialization/lazy-state-initialization.jpg'
+headerImage: '/assets/blog/lazy-state-initialization/lazy-state-initialization.jpg'
 imageAlt: ''
 date: '2020-10-08T05:35:07.322Z'
 ogImage:
-  url: 'https://images.unsplash.com/photo-1524125833033-bc59e523d3e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80'
+  url: '/assets/blog/lazy-state-initialization/lazy-state-initialization.jpg'
 ---
 <span>Photo by <a href="https://unsplash.com/@photoholgic?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Photoholgic</a> on <a href="https://unsplash.com/s/photos/lazy?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 
