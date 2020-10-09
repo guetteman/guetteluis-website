@@ -88,3 +88,5 @@ function Counter({initialValue}) {
 ```
 
 We can just pass an anonymous function as a param of the `useState`. Now we improved the performance of our code just with a small change. Be careful about when to use it. If you only pass a static value, you don’t need to do this, the lazy state initialization is really useful when **performing a computationally expensive process for initializing state**, keep it in mind.
+
+I learned this on [Get Really Good at React | Epic React by Kent C. Dodds](https://epicreact.dev/) 😃
